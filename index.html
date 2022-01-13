@@ -1,87 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <title>Quiz | Você consegue acertar qual é o filme pelo título em português de Portugal?</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Quiz | Você Sabe tudo sobre Minecraft?</title>
 </head>
+
 <body>
-  <div class="intro py-3 bg-primary text-center">
-    <div class="container">
-      <h2 class="text-light display-3 my-4">Quiz</h2>
+  <div class="intro bg-warning text-center">
+    <div class="container-fluid row align-items-center">
+
+      <div class="col">
+        <image class="rounded float-start"
+          src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5f/CaveGame.png">
+        </image>
+      </div>
+      <div class="col">
+        <h2 class="alert alert-success display-3 mt-2">Quiz Minecraft</h2>
+      </div>
+      <div class="col">
+        <image class="rounded float-start"
+          src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3f/Beta.png">
+        </image>
+      </div>
     </div>
   </div>
 
   <div class="quiz py-4 bg-dark">
     <div class="container">
-      <h2 class="my-5 text-white">Você consegue acertar qual é o filme pelo título em português de Portugal?</h2>
+      <h2 class="my-5 text-white">Você consegue acertar estas perguntas sobre a história do jogo Minecraft (Java
+        Edition)?</h2>
 
       <form class="quiz-form text-light">
         <div class="my-5">
-          <p class="lead font-weight-normal">1. "O Mal Disposto" é o nome dado para o filme:</p>
+          <p class="lead font-weight-normal">1. Quando foi o lançamento Oficial?:</p>
           <div class="form-check my-2 text-white-50">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion1" value="A" checked>
-              Psicose
+              18 de Novembro de 2011
             </label>
           </div>
           <div class="form-check my-2 text-white-50">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion1" value="B">
-              Meu Malvado Favorito
+              08 de Maio de 2009
             </label>
           </div>
         </div>
 
         <div class="my-5">
-          <p class="lead font-weight-normal">2. "O Aviso" é o nome dado para o filme de terror:</p>
+          <p class="lead font-weight-normal">2. Por quanto tempo o jogo esteve em fase Beta?</p>
           <div class="form-check my-2 text-white-50">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion2" value="A" checked>
-              O Grito
+              11 meses
             </label>
           </div>
           <div class="form-check my-2 text-white-50">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion2" value="B">
-              O Chamado
+              02 anos
             </label>
           </div>
         </div>
 
         <div class="my-5">
-          <p class="lead font-weight-normal">3. "Uma Família a Beira de um Ataque de Nervos" é o título de:</p>
+          <p class="lead font-weight-normal">3. Quando o jogo começou a ser comercializado?</p>
           <div class="form-check my-2 text-white-50">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion3" value="A" checked>
-              Família do Bagulho
+              Após o lançamento
             </label>
           </div>
           <div class="form-check my-2 text-white-50">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion3" value="B">
-              Pequena Miss Sunshine
+              Na fase Alfa de desenvolvimento
             </label>
           </div>
         </div>
 
         <div class="my-5">
-          <p class="lead font-weight-normal">4. "O Rei dos Gazeteiros" é o famoso filme:</p>
+          <p class="lead font-weight-normal">4. Antes da adição do sistema de fome, como o jogador recuperava vida?</p>
           <div class="form-check my-2 text-white-50">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion4" value="A" checked>
-              O Lobo de Wall Street
+              Dormindo
             </label>
           </div>
           <div class="form-check my-2 text-white-50">
             <label class="form-check-label">
               <input type="radio" name="inputQuestion4" value="B">
-              Curtindo a Vida Adoidado
+              Comendo
             </label>
           </div>
         </div>
-        
+        <div class="conteiner-fluid text-center align-items-center">
+          <p class="bg-info text-light w-25 mx-auto rounded" id="pontuacao"></button>
+        </div>
         <div class="text-center">
           <button class="btn bg-primary text-light">Enviar</button>
         </div>
@@ -91,4 +110,5 @@
 
   <script src="./app.js"></script>
 </body>
+
 </html>
