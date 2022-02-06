@@ -1,10 +1,22 @@
-const respostasCertas = ["A", "A", "B", "B"]
+const respostasCertas = ["B", "A", "C", "D"]
 const form = document.querySelector(".quiz-form")
 const mensagem = document.querySelector("#pontuacao")
 
-form.addEventListener("submit", event => {
+const calculaPontuacao = function (respostasDadas) {
+  let pontuacao = 0
+
+  respostasDadas.forEach((respostaDada, index) => {
+    if (respostaDada === respostasCertas[index]) {
+      pontuacao += 25
+    }
+  })
+
+  return pontuacao
+}
+
+const submitQuiz = function (event) {
   event.preventDefault()
-  let total = 0
+
   const respostasDadas = [
     form.inputQuestion1.value,
     form.inputQuestion2.value,
@@ -12,11 +24,10 @@ form.addEventListener("submit", event => {
     form.inputQuestion4.value
   ]
 
-  respostasDadas.forEach((resposta, index) => {
-    if (resposta === respostasCertas[index]) {
-      total += 25
-    }
-  })
+  const total = calculaPontuacao(respostasDadas)
 
   mensagem.textContent = `Você acertou ${total}% das perguntas`
-})
+}
+
+
+form.addEventListener("submit", submitQuiz)
