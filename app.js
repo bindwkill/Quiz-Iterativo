@@ -3,12 +3,13 @@ const form = document.querySelector(".quiz-form")
 const mensagem = document.querySelector("#pontuacao")
 
 const obterRespostasDadas = () => {
-  return [
-    form.inputQuestion1.value,
-    form.inputQuestion2.value,
-    form.inputQuestion3.value,
-    form.inputQuestion4.value
-  ]
+  const respostasDadas = []
+
+  for (let i = 1; i <= 4; i++) {
+    respostasDadas.push(form[`inputQuestion${i}`].value)
+  }
+
+  return respostasDadas
 }
 
 const calculaPontuacao = function (respostasDadas) {
@@ -23,6 +24,20 @@ const calculaPontuacao = function (respostasDadas) {
   return pontuacao
 }
 
+const animaPontuação = pontuacao => {
+  let pontos = 0
+  mensagem.setAttribute("style", "height:80px")
+
+  const exibePontuacao = () => {
+    mensagem.textContent = `Você acertou ${pontos++}% das perguntas`
+    if (pontos > pontuacao) {
+      clearInterval(id)
+    }
+  }
+
+  const id = setInterval(exibePontuacao, 50)
+}
+
 const submitQuiz = function (event) {
   event.preventDefault()
 
@@ -30,8 +45,8 @@ const submitQuiz = function (event) {
 
   const total = calculaPontuacao(respostasDadas)
 
-  mensagem.textContent = `Você acertou ${total}% das perguntas`
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  animaPontuação(total)
 }
-
 
 form.addEventListener("submit", submitQuiz)
