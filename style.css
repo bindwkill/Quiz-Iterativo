@@ -1,0 +1,18 @@
+body {
+  background: url(./imgs/minecraft-background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-icon {
+  width: 12rem;
+  height: 7rem;
+}
+
+.bg-transparence {
+  background-color: rgba(89, 186, 203, 0.404);
+}
+
+.custom-text {
+  font-size: 2.5rem;
+}

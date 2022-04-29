@@ -40,9 +40,7 @@ const animaPontuação = pontuacao => {
 
 const submitQuiz = function (event) {
   event.preventDefault()
-
   const respostasDadas = obterRespostasDadas()
-
   const total = calculaPontuacao(respostasDadas)
 
   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
