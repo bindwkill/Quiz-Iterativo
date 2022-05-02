@@ -1,6 +1,6 @@
 const respostasCertas = ["B", "A", "C", "D"]
 const form = document.querySelector(".quiz-form")
-const mensagem = document.querySelector("#pontuacao")
+const mensagem = document.querySelector("[data-id=pontuacao]")
 
 const obterRespostasDadas = () => {
   const respostasDadas = []
